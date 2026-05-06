@@ -66,7 +66,7 @@ All models are trained on the **MURA v1.1** dataset using Multiple Instance Lear
 ---
 
 ## Project Structure
-
+```
 osseoai/
 ├── src/
 │   ├── components/
@@ -108,6 +108,7 @@ osseoai/
 │   └── ...
 └── uploads/                    # Patient X-ray images (auto-created)
 └── patient_{id}/
+```
 ---
 
 ## Getting Started
@@ -136,6 +137,7 @@ DATABASE_URL = "postgresql://postgres:YOUR_PASSWORD@localhost/osseoai"
 ```
 
 Add your trained model checkpoints to `checkpoints/`:
+```
 checkpoints/
 ├── general_best.pth
 ├── shoulder_best.pth
@@ -145,7 +147,7 @@ checkpoints/
 ├── forearm_best.pth
 ├── hand_best.pth
 └── humerus_best.pth
-
+```
 Start the API server:
 ```bash
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
@@ -164,11 +166,13 @@ npm run dev
 ```
 
 ### 4. Open the app
+```
 http://localhost:5173
-
+```
 API documentation available at:
+```
 http://localhost:8000/docs
-
+```
 ---
 
 ## Database
